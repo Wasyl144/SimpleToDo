@@ -28,5 +28,5 @@
     <button type="submit" [disabled]="!formData.valid" class="btn btn-outline-dark">Submit</button>
 </form>
 <div>
-    <app-list *ngIf="datas.length>0" [Data]="datas"></app-list>
+    <app-list *ngIf="datas.length>0" (delData)="rmData($event)" [Data]="datas"></app-list>
 </div>

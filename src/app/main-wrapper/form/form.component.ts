@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { FormData } from '../FormData'
+
 
 
 @Component({
@@ -11,6 +12,7 @@ import { FormData } from '../FormData'
 export class FormComponent implements OnInit {
 
   constructor() { }
+
 
   formData = new FormGroup({
     'task': new FormControl('',[
@@ -46,6 +48,19 @@ export class FormComponent implements OnInit {
     this.datas.push(this.data); //przypisanie wartości do tablicy
     this.id=this.id+1;// zmiana id
     return
+  }
+  rmData($event: number){
+    console.log($event);
+    
+    if ($event > -1) {
+      for(let i=0;i<this.datas.length;++i){
+        if(this.datas[i].id==$event){
+          this.datas.splice(i,1)
+          break;
+        }
+      }
+      
+    }
   }
 
 }

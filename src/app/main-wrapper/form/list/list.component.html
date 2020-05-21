@@ -12,7 +12,7 @@
                 <div class="container">
                   <h1 class="display">To do:</h1>
                   <p class="lead">{{data.task}}</p>
-                  <button type="button" class="btn btn-outline-danger">Done</button>
+                  <button type="button" (click)="onClick(data.id)" class="btn btn-outline-danger">Done</button>
                 </div>
               </div>
             </div>
