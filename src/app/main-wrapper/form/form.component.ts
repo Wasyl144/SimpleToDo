@@ -49,9 +49,9 @@ export class FormComponent implements OnInit {
     this.id=this.id+1;// zmiana id
     return
   }
+
+
   rmData($event: number){
-    console.log($event);
-    
     if ($event > -1) {
       for(let i=0;i<this.datas.length;++i){
         if(this.datas[i].id==$event){

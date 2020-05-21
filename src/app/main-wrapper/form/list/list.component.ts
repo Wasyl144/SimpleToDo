@@ -14,12 +14,10 @@ export class ListComponent implements OnInit {
   @Output() delData=new EventEmitter();
 
   ngOnInit(): void {
-    console.log(this.Data) // dla debugowania w konsoli przeglądarki
     
   }
 
   onClick(id: number) {
-    console.log(id);
     this.delData.emit(id);
   }
 
